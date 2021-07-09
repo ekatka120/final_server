@@ -11,6 +11,8 @@ iostream
 -
 Exceptions.hpp
 ../includes/Exceptions.hpp
+RequestHandler.hpp
+../includes/RequestHandler.hpp
 map
 -
 unistd.h
@@ -67,8 +69,6 @@ Server.hpp
 ../includes/Server.hpp
 Response.hpp
 ../includes/Response.hpp
-Cgi.hpp
-../includes/Cgi.hpp
 
 ../includes/Response.hpp
 iostream
@@ -125,4 +125,6 @@ RequestHandler.hpp
 /Users/dskittri/Desktop/final_server/src/RequestHandler.hpp
 utils.hpp
 /Users/dskittri/Desktop/final_server/src/utils.hpp
+Cgi.hpp
+/Users/dskittri/Desktop/final_server/src/Cgi.hpp
 

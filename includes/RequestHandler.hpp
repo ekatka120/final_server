@@ -8,7 +8,6 @@
 # include <regex>
 # include "Server.hpp"
 # include "Response.hpp"
-# include "Cgi.hpp"
 
 class Server;
 class Response;
@@ -38,6 +37,7 @@ private:
 	int									_badRequest;       // 400
 
 public:
+    RequestHandler() {};
 	RequestHandler(Server *server);
 	RequestHandler(const RequestHandler &);
 	virtual ~RequestHandler();

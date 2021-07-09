@@ -3,10 +3,14 @@
 
 CMakeFiles/server_cpp.dir/src/Cgi.cpp.o
  ../includes/Cgi.hpp
+ ../includes/Connection.hpp
+ ../includes/Defenitions.hpp
  ../includes/Exceptions.hpp
+ ../includes/RequestHandler.hpp
+ ../includes/Response.hpp
+ ../includes/Server.hpp
  /Users/dskittri/Desktop/final_server/src/Cgi.cpp
 CMakeFiles/server_cpp.dir/src/Cluster.cpp.o
- ../includes/Cgi.hpp
  ../includes/Cluster.hpp
  ../includes/Connection.hpp
  ../includes/Defenitions.hpp
@@ -19,7 +23,6 @@ CMakeFiles/server_cpp.dir/src/Cluster.cpp.o
  ../src/get_next_line/get_next_line.h
  /Users/dskittri/Desktop/final_server/src/Cluster.cpp
 CMakeFiles/server_cpp.dir/src/Connection.cpp.o
- ../includes/Cgi.hpp
  ../includes/Connection.hpp
  ../includes/Defenitions.hpp
  ../includes/Exceptions.hpp
@@ -43,7 +46,6 @@ CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o
  ../src/utils.cpp
  /Users/dskittri/Desktop/final_server/src/RequestHandler.cpp
 CMakeFiles/server_cpp.dir/src/Response.cpp.o
- ../includes/Cgi.hpp
  ../includes/Connection.hpp
  ../includes/Defenitions.hpp
  ../includes/Exceptions.hpp
@@ -52,7 +54,6 @@ CMakeFiles/server_cpp.dir/src/Response.cpp.o
  ../includes/Server.hpp
  /Users/dskittri/Desktop/final_server/src/Response.cpp
 CMakeFiles/server_cpp.dir/src/Server.cpp.o
- ../includes/Cgi.hpp
  ../includes/Connection.hpp
  ../includes/Defenitions.hpp
  ../includes/Exceptions.hpp
@@ -70,7 +71,6 @@ CMakeFiles/server_cpp.dir/src/get_next_line/get_next_line_utils.cpp.o
  /Users/dskittri/Desktop/final_server/src/get_next_line/get_next_line.h
  /Users/dskittri/Desktop/final_server/src/get_next_line/get_next_line_utils.cpp
 CMakeFiles/server_cpp.dir/src/main.cpp.o
- ../includes/Cgi.hpp
  ../includes/Cluster.hpp
  ../includes/Connection.hpp
  ../includes/Defenitions.hpp

@@ -4,6 +4,7 @@
 
 #include "RequestHandler.hpp"
 #include "utils.hpp"
+#include "Cgi.hpp"
 
 RequestHandler::RequestHandler(Server *server) : _server(server){
 	_response = new Response();
@@ -312,9 +313,6 @@ void				RequestHandler::prepareResponse(){
         std::size_t found = _filePath.find_last_of("/");
         tmp_path = _filePath.substr(0,found+1);
         tmp_url = _filePath.substr(found+1);
-        std::cout << " _rawRequest: " << _rawRequest << '\n';
-//        std::cout << " path: " << tmp_path << '\n';
-//        std::cout << " file: " << tmp_url << '\n';
         _url = tmp_url;
         _filePath = tmp_path;
 	    //обрезаем последнее до /url
@@ -452,7 +450,9 @@ void	RequestHandler::responseToPostRequest(){
 {
     std::string filename = _filePath + _url;
 
-    if (!(_currentLocation->cgi_extension).empty())
+    //Temporary (while _body does not work)
+    _body = _rawRequest;
+    if ((_currentLocation->cgi_extension).empty())
     {
         if (if_file_exists(filename) == true)
         {
@@ -473,7 +473,6 @@ void	RequestHandler::responseToPostRequest(){
             std::ofstream file(filename, std::ios::out | std::ios::in | std::ios::trunc);
             if (file.is_open())
             {
-                std::cout << _body;
                 file << _body;
                 std::cout << "HTTP/1.1 201 Created..." << std::endl;
                 std::cout << _body << std::endl;
@@ -485,7 +484,7 @@ void	RequestHandler::responseToPostRequest(){
     {
         std::cout << "Post, CGI" << std::endl;
         Cgi cgi_obj;
-        cgi_obj.cgi_start();
+        cgi_obj.cgi_start(_body);
     }
 
 

@@ -45,7 +45,7 @@ void Cgi::cgi_usage_2(char **filename)
     argv[0] = new char[1024];
     argv[1] = new char[1024];
     argv[2] = NULL;
-
+    //остановилась тут (надо брать данные из request handler)
     std::string tmp1 = "/Users/patutina/Desktop/42/new_boris_server/cgi_tester";
     std::string tmp2 = "/Users/patutina/Desktop/42/new_boris_server/new_txt_file";
     strcpy(argv[0], tmp1.c_str());
@@ -79,7 +79,7 @@ void Cgi::cgi_usage_2(char **filename)
     }
 };
 
-void Cgi::cgi_usage()
+void Cgi::cgi_usage(std::string body)
 {
     char    *filename[2];
     int     input;
@@ -95,7 +95,7 @@ void Cgi::cgi_usage()
     if (input == -1 || output == -1)
         throw Exceptions::OpenTmpFileException();
 
-    std::string body_from_client = "I Am So Smart! \nI Am So Smart! \nS-M-R-T! \nI Mean S-M-A-R-T!\nxoxo\n";
+    std::string body_from_client = body;
     if (write(input, body_from_client.c_str(), body_from_client.size()) == -1)
         throw Exceptions::WriteException();
 
@@ -147,10 +147,10 @@ void Cgi::cgi_set_envs()
     this->_map_envp["SERVER_SOFTWARE"]      = "HTTP/1.1";
 };
 
-void Cgi::cgi_start()
+void Cgi::cgi_start(std::string body)
 {
     cgi_set_envs();
     map_envs_to_char_array();
-    cgi_usage();
+    cgi_usage(body);
     //cgi_response();
 };
