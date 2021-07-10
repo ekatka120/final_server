@@ -13,6 +13,8 @@ Exceptions.hpp
 ../includes/Exceptions.hpp
 RequestHandler.hpp
 ../includes/RequestHandler.hpp
+utils.hpp
+../includes/utils.hpp
 map
 -
 unistd.h
@@ -101,14 +103,26 @@ stdlib.h
 -
 cstring
 -
+map
+-
 iostream
 -
 sys/stat.h
 -
-utils.cpp
-../includes/utils.cpp
+Server.hpp
+../includes/Server.hpp
+Response.hpp
+../includes/Response.hpp
 
-../src/utils.cpp
+/Users/dskittri/Desktop/final_server/src/RequestHandler.cpp
+RequestHandler.hpp
+/Users/dskittri/Desktop/final_server/src/RequestHandler.hpp
+utils.cpp
+/Users/dskittri/Desktop/final_server/src/utils.cpp
+Cgi.hpp
+/Users/dskittri/Desktop/final_server/src/Cgi.hpp
+
+/Users/dskittri/Desktop/final_server/src/utils.cpp
 unistd.h
 -
 stdlib.h
@@ -119,12 +133,4 @@ iostream
 -
 sys/stat.h
 -
-
-/Users/dskittri/Desktop/final_server/src/RequestHandler.cpp
-RequestHandler.hpp
-/Users/dskittri/Desktop/final_server/src/RequestHandler.hpp
-utils.hpp
-/Users/dskittri/Desktop/final_server/src/utils.hpp
-Cgi.hpp
-/Users/dskittri/Desktop/final_server/src/Cgi.hpp
 

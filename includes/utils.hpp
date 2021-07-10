@@ -5,9 +5,11 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <cstring>
+# include <map>
 # include <iostream>
 # include <sys/stat.h>
-# include "utils.cpp"
+# include "Server.hpp"
+# include "Response.hpp"
 
 bool		    if_file_exists(std::string file_name);
 static	int		sent_len(char const *s, char c);
@@ -25,5 +27,23 @@ typedef struct t_time
     char    *time_no_seconds;
     char    *year;
 } t_time;
+
+class Server;
+class Response;
+
+typedef struct t_info_to_cgi
+{
+	std::string							_body;
+    std::string							_filePath;
+    std::string							_cgi_path;
+    std::string							_url;
+    Server*								_server;
+	struct s_location					*_currentLocation;
+    Response							*_response;
+    std::string							_answer;
+	unsigned long						_bytesToSend;
+	std::map<std::string,std::string>	_headers;
+} t_info_to_cgi;
+
 
 #endif

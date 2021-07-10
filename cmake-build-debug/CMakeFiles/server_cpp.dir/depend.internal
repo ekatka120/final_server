@@ -9,6 +9,7 @@ CMakeFiles/server_cpp.dir/src/Cgi.cpp.o
  ../includes/RequestHandler.hpp
  ../includes/Response.hpp
  ../includes/Server.hpp
+ ../includes/utils.hpp
  /Users/dskittri/Desktop/final_server/src/Cgi.cpp
 CMakeFiles/server_cpp.dir/src/Cluster.cpp.o
  ../includes/Cluster.hpp
@@ -43,8 +44,8 @@ CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o
  ../includes/Response.hpp
  ../includes/Server.hpp
  ../includes/utils.hpp
- ../src/utils.cpp
  /Users/dskittri/Desktop/final_server/src/RequestHandler.cpp
+ /Users/dskittri/Desktop/final_server/src/utils.cpp
 CMakeFiles/server_cpp.dir/src/Response.cpp.o
  ../includes/Connection.hpp
  ../includes/Defenitions.hpp
