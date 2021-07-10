@@ -95,8 +95,8 @@ void				RequestHandler::testPrint()
 
 int					RequestHandler::checkNewPartOfRequest(char *partOfRequest){
 	_rawRequest += partOfRequest;
-	int res;
-	if (!(res = parseRequest())){//парсинг запроса на готовность к обработке(наличие \n\r\n\r) + заполнение полей
+
+	if (!parseRequest()){//парсинг запроса на готовность к обработке(наличие \n\r\n\r) + заполнение полей
 		return 0;
 		//1) ищем \r\n\r\n
 		//2) если нашли то контен сайз и сравнить с сайзом configa( ReuestHandler._server->_max_body_size), если ошибка уставint _badContentSize;
@@ -104,11 +104,6 @@ int					RequestHandler::checkNewPartOfRequest(char *partOfRequest){
 		//4) PUT, DELETE, POST, GET указано что то другое ставишь флаг _wrongMethods
 		//
 	}
-//	else if (res < 0)
-//    {
-//    std::cout << "returned -1\n";
-//    exit(1);
-//    }
 	else {
 		prepareResponse();
 		_rawRequest = "";
